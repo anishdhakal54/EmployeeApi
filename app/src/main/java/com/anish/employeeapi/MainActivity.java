@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-        Button btnShowAllEmployee,btnSearchEmployee;
+        Button btnShowAllEmployee,btnSearchEmployee,btnRegisterEmployee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnShowAllEmployee=findViewById(R.id.btnShowAllEmployee);
         btnSearchEmployee=findViewById(R.id.btnSearchEmployee);
+        btnRegisterEmployee=findViewById(R.id.btnRegisterEmployee);
 
         btnShowAllEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, employeeSearch.class);
                 startActivity(intent);
 
+            }
+        });
+        btnRegisterEmployee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,registerEmployeeActivity.class);
+                startActivity(intent);
             }
         });
 

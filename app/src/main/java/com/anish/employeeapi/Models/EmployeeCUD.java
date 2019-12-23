@@ -1,19 +1,33 @@
-package com.anish.employeeapi.model;
+package com.anish.employeeapi.Models;
 
 public class EmployeeCUD {
     private int id;
     private String name;
-    private  float salary;
+    private float salary;
     private int age;
     private String profile_image;
 
-    public EmployeeCUD( String name, float salary, int age) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getProfile_image() {
+        return profile_image;
+    }
+
+    public void setProfile_image(String profile_image) {
+        this.profile_image = profile_image;
+    }
+
+    public EmployeeCUD(String name, float salary, int age) {
         this.name = name;
         this.salary = salary;
         this.age = age;
     }
-
-
 
     public String getName() {
         return name;
@@ -38,6 +52,4 @@ public class EmployeeCUD {
     public void setAge(int age) {
         this.age = age;
     }
-
-
 }

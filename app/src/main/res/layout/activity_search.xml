@@ -4,29 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".employeeSearch">
+    tools:context=".SearchActivity"
+    android:orientation="vertical">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Employee No"
-        android:id="@+id/etEmployeeNo"
-        android:layout_margin="15dp"
         android:textSize="20sp"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:id="@+id/etSearch"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_margin="20dp"
-        android:id="@+id/btnSearch"/>
-
-
+        android:textSize="20sp"
+        android:id="@+id/BtnSearch"
+        android:text="Search"/>
     <TextView
-        android:id="@+id/tvOutput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"/>
+        android:id="@+id/tvOutput"
+        android:textSize="20sp"/>
 
 </LinearLayout>

@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".employeeSearch" />
-        <activity android:name=".registerEmployeeActivity" />
-        <activity android:name=".allEmployeeActivity" />
+
+        <activity android:name=".ListActivity">
+         </activity>
+        <activity android:name=".RegisterActivity">
+        </activity>
+        <activity android:name=".SearchActivity">
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

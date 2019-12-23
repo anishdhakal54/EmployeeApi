@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnShowAllEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,allEmployeeActivity.class);
+                Intent intent=new Intent(MainActivity.this,ListActivity.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnSearchEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, employeeSearch.class);
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
                 startActivity(intent);
 
             }
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegisterEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,registerEmployeeActivity.class);
+                Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
                 startActivity(intent);
             }
         });

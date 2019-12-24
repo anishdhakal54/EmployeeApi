@@ -36,11 +36,8 @@ TextView tvOutput;
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit=new Retrofit.Builder()
-                                    .baseUrl(URL.base_url)
-                                    .addConverterFactory(GsonConverterFactory.create())
-                                    .build();
-                EmployeeAPI employeeAPI =retrofit.create(EmployeeAPI.class);
+                EmployeeAPI employeeAPI=URL.createInstance().create(EmployeeAPI.class);
+
                 Call<Employee> listCall=employeeAPI.getEmployeeByID(Integer.parseInt(etSearch.getText().toString()));
 
                 listCall.enqueue(new Callback<Employee>() {
@@ -53,7 +50,6 @@ TextView tvOutput;
 
                         Employee employee = response.body();
                         String Content ="";
-                        Content += "ID : "+ employee.getId()+"\n";
                         Content += "Name : "+ employee.getEmployee_name()+"\n";
                         Content += "Salary : "+ employee.getEmployee_salary()+"\n";
                         Content += "Age : "+ employee.getEmployee_age()+"\n";

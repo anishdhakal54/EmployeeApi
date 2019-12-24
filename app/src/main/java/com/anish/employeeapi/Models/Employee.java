@@ -15,13 +15,7 @@ public class Employee {
         this.profile_image = profile_image;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getEmployee_name() {
         return employee_name;
@@ -47,11 +41,5 @@ public class Employee {
         this.employee_age = employee_age;
     }
 
-    public String getProfile_image() {
-        return profile_image;
-    }
 
-    public void setProfile_image(String profile_image) {
-        this.profile_image = profile_image;
-    }
 }

@@ -37,11 +37,7 @@ RecyclerView recyclerView;
         recyclerView.setHasFixedSize(true);
 
 
-       Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl(URL.base_url)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        EmployeeAPI employeeAPI =retrofit.create(EmployeeAPI.class);
+        EmployeeAPI employeeAPI=URL.createInstance().create(EmployeeAPI.class);
         Call<List<Employee>> listCall=employeeAPI.getAllEmployee();
         //Asynchronous call
         listCall.enqueue(new Callback<List<Employee>>() {
